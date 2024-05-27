@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #ff0022;
+    font-size: 16px;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #a61010;
+    box-shadow: 0 0 12px -2px black;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    color: greenyellow;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #fff;
+}
+
+nav {
+    box-shadow: 0 0 12px -2px black;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: aliceblue;
+    height: 80px;
+    padding: 10px 20px;
+    justify-content: space-between;
+    z-index: 1000; /* Added for layering */
+}
+
+main {
+    padding: calc(100px + 1rem) 20px 120px;
+    box-shadow: 0 0 12px -2px black;
+    color: aliceblue;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.25rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: aliceblue;
+    height: 70px;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 12px -2px black;
+    z-index: 1000; /* Added for layering */
+}
+
+footer a {
+    margin: 0 25px;
+}
+
+footer .media-link {
+    height: 45px;
+}
+
+.active {
+    border-bottom: 1px solid #c0c0c0;
+}
+
+main > img {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 10px;
+}
+
+main .quote {
+    font-family: 'Satisfy', cursive;
+    color: aliceblue;
+    font-size: 3rem;
+    font-weight: 100;
+    text-shadow: 1px 1px 2px black;
+    text-align: center;
+    margin-top: 2em;
+}
+
+section {
+    border-top: 1px solid #bbb;
+    font-size: 1rem;
+    padding: 20px 0;
+}
+
+.about-section:nth-of-type(2n) > img {
+    float: left;
+    margin: 0 24px 24px 0;
+}
+
+.about-section:nth-of-type(2n + 1) > img {
+    float: right;
+    margin: 0 24px 24px 24px;
+}
+
+.about-section img {
+    height: 128px;
+}
+
+#about-header {
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.project {
+    background: #fafafa;
+    color: #222;
+    box-shadow: 0 3px 6px -2px #ccc;
+    margin: 2em 0;
+    padding: 1em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px -2px #ccc;
+}
+
+.project:nth-of-type(2n) img {
+    width: 240px;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    float: left;
+    box-shadow: 0 3px 6px -2px #ccc;
+}
+
+.project:nth-of-type(2n + 1) img {
+    width: 240px;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    float: right;
+    box-shadow: 0 3px 6px -2px #ccc;
+}
+
+.project h2 {
+    font-weight: 500;
+    font-size: 2em;
+    margin: 0 0 1em;
+    border-bottom: 2px solid #ccc;
+}
+
+#project-header {
+    font-weight: 100;
+    font-size: 2rem;
+    border-bottom: 1px solid #ccc;
+}
+
+@media screen and (max-width: 625px) {
+    .project {
+        width: 100%;
+    }
+
+    .project-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-content img {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    main .quote {
+        margin-top: 0;
+    }
+
+    .about-section:nth-of-type(n) > img.about-img {
+        float: unset;
+        margin: unset;
+        width: 100%;
+        height: unset;
+    }
+
+    footer a {
+        margin: 0;
+    }
+
+    #form {
+        margin: 0;
+    }
+}
